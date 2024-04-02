@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>teamID</key>
+	<string>F22YRQ2QK9</string>
+	<key>bundle-identifier</key>
+	<string>sg.carro.CarroDemo</string>
+	<key>method</key>
+	<string>app-store</string>
+	<key>provisioningProfiles</key>
+	<dict>
+		<key>sg.carro.CarroDemo</key>
+		<string>CarroDemo</string>
+	</dict>
+</dict>
+</plist>
