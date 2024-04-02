@@ -7,6 +7,20 @@ on:
   push:
     branches:
       - 'pack/**'
+      
+env:
+
+    CURRENT_ENV: "STAGING" #打包环境
+
+    XCWORKSPACE_NAME: "CarroDemo" #Workspace名称
+    PROJSCHEME_NAME: "CarroDemo" #Name of the scheme to be packaged
+    
+    PROJ_VERSION_DNUMBER: "1.0"
+    PROJ_BUIL_DNUMBER: "1"
+    COMMIT_LOG: "pack test 007"
+
+    APPLE_ID: "diligencefu@sina.com" #apple id
+    APPLE_ID_PSW: "xdvm-tedb-xcvj-huec" #apple id 的特殊密码
 
 jobs:
   build_with_signing:
@@ -68,10 +82,19 @@ jobs:
           xcodebuild -exportArchive -archivePath $RUNNER_TEMP/iamgroot.xcarchive -exportOptionsPlist $EXPORT_OPTS_PATH -exportPath $RUNNER_TEMP/build
 
       - name: Upload application
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v2
         with:
           name: app
           path: ${{ runner.temp }}/build/CarroDemo.ipa
           # you can also archive the entire directory
           # path: ${{ runner.temp }}/build
           retention-days: 3
+          
+      - name: Upload to App Store
+        run: |
+            xcrun altool --upload-app -f "~/Downloads/$PROJSCHEME_NAME/$XCWORKSPACE_NAME.ipa" -t ios -u ${{ env.APPLE_ID }} -p ${{ env.APPLE_ID_PSW }}
+
+      - name: Send release info
+        run: |
+          echo "git提交: $COMMIT_LOG"
+          curl -X POST -H "Content-Type: application/json" -d '{"msg_type":"text","content":{"text":"APP Name: ${{env.PROJSCHEME_NAME}} \nPlatform: iOS \nENV:${{env.CURRENT_ENV}} \nVersion: ${{env.PROJ_VERSION_DNUMBER}}(${{env.PROJ_BUIL_DNUMBER}})\n\nUpdates:\n 1.${{env.COMMIT_LOG}}"}}' https://open.larksuite.com/open-apis/bot/v2/hook/f85c8bb2-b5ae-4726-b93c-f1cb29cf8d17
