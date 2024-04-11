@@ -67,9 +67,9 @@ jobs:
         run: |
           /usr/local/bin/pod install
           
-      - name: Build
-        run: |
-          xcodebuild build -workspace $XCWORKSPACE_NAME.xcworkspace -scheme "$PROJSCHEME_NAME" -allowProvisioningUpdates
+#      - name: Build
+#        run: |
+#          xcodebuild build -workspace $XCWORKSPACE_NAME.xcworkspace -scheme "$PROJSCHEME_NAME" -allowProvisioningUpdates
 #          xcodebuild build -project $XCWORKSPACE_NAME.xcodeproj -scheme "$PROJSCHEME_NAME" -allowProvisioningUpdates
      
       - name: Archive
