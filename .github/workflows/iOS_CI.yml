@@ -63,9 +63,9 @@ jobs:
           mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
           cp $PP_PATH ~/Library/MobileDevice/Provisioning\ Profiles
           
-      - name: Build
-        run: |
-          xcodebuild build -workspace $XCWORKSPACE_NAME.xcworkspace -scheme "$PROJSCHEME_NAME" -allowProvisioningUpdates
+#      - name: Build
+#        run: |
+#          xcodebuild build -workspace $XCWORKSPACE_NAME.xcworkspace -scheme "$PROJSCHEME_NAME" -allowProvisioningUpdates
 
       - name: Archive
         run: |
