@@ -71,7 +71,9 @@ jobs:
 #        run: |
 #          xcodebuild build -workspace $XCWORKSPACE_NAME.xcworkspace -scheme "$PROJSCHEME_NAME" -allowProvisioningUpdates
 #          xcodebuild build -project $XCWORKSPACE_NAME.xcodeproj -scheme "$PROJSCHEME_NAME" -allowProvisioningUpdates
-     
+      - name: Clean
+        run: |
+          xcodebuild clean
       - name: Archive
         run: |
           xcodebuild -scheme "CarroDemo" \
