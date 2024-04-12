@@ -79,14 +79,14 @@ jobs:
       - name: Archive
         run: |
           xcodebuild -workspace $XCWORKSPACE_NAME.xcworkspace -scheme "$PROJSCHEME_NAME" -archivePath $ARCHIVE_NAME.xcarchive archive
-      - name: Archive
-        run: |
-          xcodebuild -scheme "CarroDemo" \
-          -archivePath $RUNNER_TEMP/iamgroot.xcarchive \
-          -sdk iphoneos \
-          -configuration Debug \
-          -destination generic/platform=iOS \
-          clean archive
+#      - name: Archive
+#        run: |
+#          xcodebuild -scheme "CarroDemo" \
+#          -archivePath $RUNNER_TEMP/iamgroot.xcarchive \
+#          -sdk iphoneos \
+#          -configuration Debug \
+#          -destination generic/platform=iOS \
+#          clean archive
 
 #      - name: export ipa
 #        env:
