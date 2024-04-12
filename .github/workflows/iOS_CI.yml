@@ -14,7 +14,8 @@ env:
 
     XCWORKSPACE_NAME: "CarroDemo" #Workspace名称
     PROJSCHEME_NAME: "CarroDemo" #Name of the scheme to be packaged
-    
+    ARCHIVE_NAME: "CarroDemo" #Package as the name after xcarchive
+
     PROJ_VERSION_DNUMBER: "1.0"
     PROJ_BUIL_DNUMBER: "1"
     COMMIT_LOG: "pack test 007"
@@ -77,15 +78,15 @@ jobs:
           
       - name: Archive
         run: |
-          xcodebuild -workspace CarroDemo.xcworkspace -scheme "$CarroDemo" -archivePath CarroDemo.xcarchive archive
-#      - name: Archive
-#        run: |
-#          xcodebuild -scheme "CarroDemo" \
-#          -archivePath $RUNNER_TEMP/iamgroot.xcarchive \
-#          -sdk iphoneos \
-#          -configuration Debug \
-#          -destination generic/platform=iOS \
-#          clean archive
+          xcodebuild -workspace $XCWORKSPACE_NAME.xcworkspace -scheme "$PROJSCHEME_NAME" -archivePath $ARCHIVE_NAME.xcarchive archive
+      - name: Archive
+        run: |
+          xcodebuild -scheme "CarroDemo" \
+          -archivePath $RUNNER_TEMP/iamgroot.xcarchive \
+          -sdk iphoneos \
+          -configuration Debug \
+          -destination generic/platform=iOS \
+          clean archive
 
 #      - name: export ipa
 #        env:
