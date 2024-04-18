@@ -1,16 +1,34 @@
 PODS:
+  - EmptyDataSet-Swift (5.0.0)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
   - IQKeyboardManagerSwift (7.0.1)
+  - SnapKit (5.6.0)
+  - Swinject (2.8.3)
 
 DEPENDENCIES:
+  - EmptyDataSet-Swift
+  - FMDB
   - IQKeyboardManagerSwift
+  - SnapKit
+  - Swinject
 
 SPEC REPOS:
   trunk:
+    - EmptyDataSet-Swift
+    - FMDB
     - IQKeyboardManagerSwift
+    - SnapKit
+    - Swinject
 
 SPEC CHECKSUMS:
+  EmptyDataSet-Swift: eb382c0c87a2d9c678077385a595cec52da38171
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   IQKeyboardManagerSwift: 7f6b1b1d1497855d2beea7f2f10ffcc6978525b1
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  Swinject: 893c9a543000ac2f10ee4cbaf0933c6992c935d5
 
-PODFILE CHECKSUM: 3987c20c40324d57899a0be0c4d125631e7c9045
+PODFILE CHECKSUM: 76d6e24a44072c2060fad5210fb40d08a3fb8956
 
 COCOAPODS: 1.14.3
