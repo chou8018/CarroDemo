@@ -10,21 +10,21 @@ target 'CarroDemo' do
   # Pods for CarroDemo
   pod 'IQKeyboardManagerSwift'
   pod 'EmptyDataSet-Swift'
-#  pod "ESPullToRefresh"
-#  pod 'TLPhotoPicker'
+  pod "ESPullToRefresh"
+  pod 'TLPhotoPicker'
 #  pod 'Alamofire'
 #  pod 'AlamofireImage', '~> 3.5'
   pod 'SnapKit'
-#  pod 'PromiseKit', '~> 6.8'
+  pod 'PromiseKit', '~> 6.8'
   pod 'Swinject'
-#  pod 'KeychainAccess'
+  pod 'KeychainAccess'
   pod 'FMDB'
-#  pod 'Siren'
+  pod 'Siren'
 #  pod 'Firebase/Core'
 #  pod 'Firebase/Messaging'
 #  pod 'Firebase/Auth'
 #  pod 'Firebase/RemoteConfig'
-#  pod 'Sentry'
+  pod 'Sentry'
   
   target 'CarroDemoTests' do
     inherit! :search_paths
