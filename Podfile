@@ -13,6 +13,9 @@ target 'CarroDemo' do
   pod "ESPullToRefresh"
   pod 'TLPhotoPicker'
 #  pod 'Alamofire'
+  pod 'Alamofire',
+    :git => 'https://github.com/Alamofire/Alamofire.git',
+    :branch => 'master'
 #  pod 'AlamofireImage', '~> 3.5'
   pod 'SnapKit'
   pod 'PromiseKit', '~> 6.8'
