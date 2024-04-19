@@ -12,21 +12,21 @@ target 'CarroDemo' do
   pod 'EmptyDataSet-Swift'
   pod "ESPullToRefresh"
   pod 'TLPhotoPicker'
-#  pod 'Alamofire'
-  pod 'Alamofire',
-    :git => 'https://github.com/Alamofire/Alamofire.git',
-    :branch => 'master'
-#  pod 'AlamofireImage', '~> 3.5'
+  pod 'Alamofire'
+#  pod 'Alamofire',
+#    :git => 'https://github.com/Alamofire/Alamofire.git',
+#    :branch => 'master'
+  pod 'AlamofireImage', '~> 3.5'
   pod 'SnapKit'
   pod 'PromiseKit', '~> 6.8'
   pod 'Swinject'
   pod 'KeychainAccess'
   pod 'FMDB'
   pod 'Siren'
-#  pod 'Firebase/Core'
-#  pod 'Firebase/Messaging'
-#  pod 'Firebase/Auth'
-#  pod 'Firebase/RemoteConfig'
+  pod 'Firebase/Core'
+  pod 'Firebase/Messaging'
+  pod 'Firebase/Auth'
+  pod 'Firebase/RemoteConfig'
   pod 'Sentry'
   
   target 'CarroDemoTests' do
